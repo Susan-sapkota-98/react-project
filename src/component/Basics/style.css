@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  background: #faf7f2;
+  background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.subtle {
+  color: #aaa;
+}
+
+.main-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  border-radius: 10px; /* added rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* added pointer on hover */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(75, 75, 75, 0.15);
+}
+
+.card-body {
+  display: inline-block;
+}
+
+.card-number {
+  margin-top: 15px;
+}
+
+.card-circle {
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 12px;
+  height: 25px;
+  text-align: center;
+  width: 25px;
+}
+
+.card-author {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 700; /* bolder */
+  line-height: 40px;
+  margin: 15px 0 10px;
+  text-transform: capitalize;
+  color: #222;
+}
+
+.card-description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px; /* slightly increased */
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.card-read {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin: 5px 0 20px;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+  color: #666;
+  user-select: none;
+}
+
+.card-read:after {
+  background-color: #b8bddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 9px;
+  width: 75%;
+  right: 0;
+}
+
+.card-tag {
+  float: right;
+  margin-top: 10px;
+  border: 1px solid #aaa;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: #555;
+  user-select: none;
+}
+
+.card-tag:hover {
+  background: #aaa;
+  color: black;
+}
+
+.card-media {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-media:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-card-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .card-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .card-media {
+    height: 200px;
+  }
+}
+
+/* Navbar Styling */
+.navbar {
+  padding: 40px 20px 20px;
+  text-align: center;
+  background-color: #fefefe;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Group Styling */
+.btn-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Individual Button Styling */
+/* Navbar Styling */
+.navbar {
+  padding: 40px 20px 30px;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Button Group Styling */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Pill-Style Button */
+.btn-group__item {
+  background-color: #ffffff;
+  color: #444;
+  border: 2px solid #ccc;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover Effects */
+.btn-group__item:hover {
+  background-color: #444;
+  color: #fff;
+  border-color: #444;
+  transform: translateY(-2px);
+}
+
+/* Active Focus */
+.btn-group__item:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .btn-group__item {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
