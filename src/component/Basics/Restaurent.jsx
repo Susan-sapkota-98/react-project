@@ -15,7 +15,7 @@ const Restaurent = () => {
       setMenuData(Menu);
       return;
     }
-    
+  
     const updatedList = Menu.filter((curElem) => {
       return curElem.category === category;
     });
